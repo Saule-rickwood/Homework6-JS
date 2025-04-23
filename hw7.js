@@ -97,19 +97,19 @@ console.log(getRandomInt(15, 18));
 // Время: [часы]:[минуты]:[секунды]
 
 function formatDate(date) {
-  const Days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
-  const Month = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+  const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+  const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
   const year = date.getFullYear();
   const day = date.getDate();
   const month = date.getMonth();
-  const dayOfWeek = days[date.get.Day];
+  const dayOfWeek = days[date.getDay()];
   const hours = date.getHours();
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
   return `
   
-  Дата: ${day} ${month[month]} ${year} - это ${daysOfWeek}
+  Дата: ${day} ${months[month]} ${year} - это ${dayOfWeek}
   Время: ${hours}: ${minutes}: ${seconds}`
 
 }
-console.log(formatDate(newDate()));
+console.log(formatDate(new Date()));
